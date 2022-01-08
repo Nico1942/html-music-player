@@ -1,0 +1,193 @@
+:root {
+  --background: #686868;
+  --dark: #585858;
+  --light: #787878;
+  --white: #fff;
+  --blue: #b1e0e3;
+  --red: #f09797;
+}
+
+body {
+  background-color: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  display: grid;
+  place-items: center;
+}
+
+.wraper {
+  display: grid;
+  grid-template-rows: 40px 340px auto auto 40px;
+  height: 100vh;
+  max-width: 500px;
+  align-items: center;
+  justify-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-family: Oxygen;
+  font-size: 1.2rem;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  width: 340px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.cards div {
+  min-width: 220px;
+  height: 220px;
+  border: 3px solid var(--background);
+  border-radius: 50%;
+  margin: 5px;
+  background-size: contain;
+  box-shadow: 5px 5px 6px var(--dark),
+              -5px -5px 6px var(--light);
+  scroll-snap-align: center;
+}
+
+.cards .cards__prev {
+  background-image: url(../img/cover-lp.jpg);
+}
+
+.cards .cards__actual {
+  background-image: url(../img/cover-soad.jpg);
+}
+
+
+.cards .cards__next {
+  background-image: url(../img/cover-met.jpg);
+}
+
+.nav_bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav_bar--song {
+  font-family: inherit;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.nav_bar--album {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: white;
+  margin: 15px;
+}
+
+.nav_bar--bar {
+  background-color: var(--light);
+  width: 70%;
+  height: 8px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px var(--dark) inset;
+  margin: 0;
+}
+
+.nav_bar--bar::before {
+  background-color: var(--blue);
+  content: "";
+  display: inline-block;
+  width: 70%;
+  height: inherit;
+  border-radius: inherit;
+  box-shadow: 2px 0 2px var(--dark);
+}
+
+.nav_bar--time {
+  width: 70%;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  color: white;
+}
+
+.buttons {
+  background-color: var(--background);
+  max-width: 500px;
+  min-width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  box-shadow: 0 3px 2px var(--light) inset;
+  padding-top: 2rem;
+}
+
+.button {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: var(--background);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow: -3px -3px 3px var(--light),
+               3px 3px 3px var(--dark);
+}
+
+.button:active {
+  box-shadow: -2px -2px 2px var(--light) inset,
+               2px 2px 2px var(--dark) inset;
+  background-position: 55% 55%;
+}
+
+#buttons--play-pause { display: none;}
+
+.buttons--play {
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/btn-play.svg);
+  background-size: 50%;
+}
+
+#buttons--play-pause:checked + .buttons--play {
+  background-image: url(../img/btn-pause.svg);
+  background-size: 40%;
+  box-shadow: -2px -2px 2px var(--light) inset,
+               2px 2px 2px var(--dark) inset;
+}
+
+.buttons--shuffle {
+  background-image: url(../img/btn-shuffle.svg);
+}
+
+.buttons--prev {
+  background-image: url(../img/btn-back.svg);
+}
+
+.buttons--next {
+  background-image: url(../img/btn-foward.svg);
+}
+
+.buttons--repeat {
+  background-image: url(../img/btn-repeat.svg);
+}
+
+.footer {
+  font-size: 0.8rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

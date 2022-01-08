@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="wraper">
+    <header class="header">
+      <p>Playing now...</p>
+    </header>
+    <section class="cards">
+      <a href=#prev>
+        <div id="prev" class="cards__prev"></div>
+      </a>
+      <a href=#actual>
+        <div id="actual" class="cards__actual"></div>
+      </a>
+      <a href=#next>
+        <div id="next" class="cards__next"></div>
+      </a>
+    </section>
+    <section class="nav_bar">
+      <h3 class="nav_bar--song">Holy Mountains</h3>
+      <h4 class="nav_bar--album">Hypnotize</h4>
+      <hr class="nav_bar--bar" />
+      <p class="nav_bar--time"><span>2:50</span>
+        <span>3:10</span>
+      </p>
+    </section>
+    <section class="buttons">
+      <button class="button buttons--shuffle"></button>
+      <button class="button buttons--prev"></button>
+      <input type="checkbox" id="buttons--play-pause">
+      <label class="button buttons--play" for="buttons--play-pause">
+      </label>
+      <button class="button buttons--next"></button>
+      <button class="button buttons--repeat"></button>
+    </section>
+    <footer class="footer">Hecho con amor por mi.</footer>
+  </main>
+</body>
+
+</html>
